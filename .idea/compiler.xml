@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-data-jpa-hibernate" />
+        <module name="relationship-hibernate" />
+        <module name="component-mapping" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="component-mapping" target="17" />
+      <module name="relationship-hibernate" target="17" />
+      <module name="spring-data-jpa-hibernate" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="component-mapping" options="-parameters" />
+      <module name="relationship-hibernate" options="-parameters" />
+      <module name="spring-data-jpa-hibernate" options="-parameters" />
+    </option>
+  </component>
+</project>

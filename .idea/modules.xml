@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/component-mapping/component-mapping.iml" filepath="$PROJECT_DIR$/component-mapping/component-mapping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/relationship-hibernate/relationship-hibernate.iml" filepath="$PROJECT_DIR$/relationship-hibernate/relationship-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-data-jpa-hibernate.iml" filepath="$PROJECT_DIR$/spring-data-jpa-hibernate.iml" />
+    </modules>
+  </component>
+</project>
