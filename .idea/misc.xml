@@ -6,6 +6,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/relationship-hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/component-mapping/pom.xml" />
+        <option value="$PROJECT_DIR$/buildingrestfulwebservice/pom.xml" />
+        <option value="$PROJECT_DIR$/associations/pom.xml" />
       </list>
     </option>
   </component>

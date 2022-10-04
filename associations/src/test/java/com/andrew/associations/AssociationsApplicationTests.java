@@ -1,5 +1,8 @@
 package com.andrew.associations;
 
+import com.andrew.associations.manytomany.entities.Programmer;
+import com.andrew.associations.manytomany.entities.Project;
+import com.andrew.associations.manytomany.repos.ProgrammerRepository;
 import com.andrew.associations.onetomany.entities.Customer;
 import com.andrew.associations.onetomany.entities.PhoneNumber;
 import com.andrew.associations.onetomany.repos.CustomerRepository;
@@ -8,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
@@ -16,6 +20,9 @@ class AssociationsApplicationTests {
 
     @Autowired
     CustomerRepository repository;
+
+    @Autowired
+    ProgrammerRepository programmerRepository;
 
     @Test
     void contextLoads() {
@@ -66,6 +73,30 @@ class AssociationsApplicationTests {
     @Test
     public void testDelete() {
         repository.deleteById(152L);
+    }
+
+    @Test
+    public void testManyToManyCreateProgrammer(){
+        Programmer programmer = new Programmer();
+        programmer.setName("Jon Jones");
+        programmer.setSal(10000);
+
+        HashSet<Project>  projects = new HashSet<>();
+        Project project = new Project();
+        project.setName("Wakacast Projects");
+        projects.add(project);
+
+        programmer.setProjects( projects);
+
+        programmerRepository.save(programmer);
+    }
+
+    @Test
+    @Transactional
+    public void testManyToManyFindProgrammer(){
+        Optional<Programmer> programmer = programmerRepository.findById(52);
+        System.out.println(programmer);
+        System.out.println(programmer.get().getProjects());
     }
 
 }

@@ -6,12 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="associations" />
         <module name="spring-data-jpa-hibernate" />
         <module name="relationship-hibernate" />
         <module name="component-mapping" />
+        <module name="buildingrestfulwebservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="associations" target="17" />
+      <module name="buildingrestfulwebservice" target="17" />
       <module name="component-mapping" target="17" />
       <module name="relationship-hibernate" target="17" />
       <module name="spring-data-jpa-hibernate" target="17" />
@@ -19,6 +23,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="associations" options="-parameters" />
+      <module name="buildingrestfulwebservice" options="-parameters" />
       <module name="component-mapping" options="-parameters" />
       <module name="relationship-hibernate" options="-parameters" />
       <module name="spring-data-jpa-hibernate" options="-parameters" />
