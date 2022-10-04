@@ -6,11 +6,15 @@ import com.andrew.associations.manytomany.repos.ProgrammerRepository;
 import com.andrew.associations.onetomany.entities.Customer;
 import com.andrew.associations.onetomany.entities.PhoneNumber;
 import com.andrew.associations.onetomany.repos.CustomerRepository;
+import com.andrew.associations.onetoone.entities.License;
+import com.andrew.associations.onetoone.entities.Person;
+import com.andrew.associations.onetoone.repos.LicenseRepository;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
@@ -23,6 +27,9 @@ class AssociationsApplicationTests {
 
     @Autowired
     ProgrammerRepository programmerRepository;
+
+    @Autowired
+    LicenseRepository licenseRepository;
 
     @Test
     void contextLoads() {
@@ -97,6 +104,24 @@ class AssociationsApplicationTests {
         Optional<Programmer> programmer = programmerRepository.findById(52);
         System.out.println(programmer);
         System.out.println(programmer.get().getProjects());
+    }
+
+    @Test
+    public  void testOneToOneCreateLicense(){
+        License license = new License();
+        license.setType("CAR");
+        license.setValidFrom(new Date());
+        license.setValidTo(new Date());
+
+        Person person = new Person();
+        person.setFirstName("John");
+        person.setLastName("Clinton");
+        person.setAge(30);
+
+        license.setPerson(person);
+
+        licenseRepository.save(license);
+
     }
 
 }
