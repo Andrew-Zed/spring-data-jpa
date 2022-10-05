@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/buildingrestfulwebservice/buildingrestfulwebservice.iml" filepath="$PROJECT_DIR$/buildingrestfulwebservice/buildingrestfulwebservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/component-mapping/component-mapping.iml" filepath="$PROJECT_DIR$/component-mapping/component-mapping.iml" />
       <module fileurl="file://$PROJECT_DIR$/relationship-hibernate/relationship-hibernate.iml" filepath="$PROJECT_DIR$/relationship-hibernate/relationship-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-crud-operation/simple-crud-operation.iml" filepath="$PROJECT_DIR$/simple-crud-operation/simple-crud-operation.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-data-jpa-hibernate.iml" filepath="$PROJECT_DIR$/spring-data-jpa-hibernate.iml" />
     </modules>
   </component>

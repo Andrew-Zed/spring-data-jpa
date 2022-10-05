@@ -11,6 +11,7 @@
         <module name="relationship-hibernate" />
         <module name="component-mapping" />
         <module name="buildingrestfulwebservice" />
+        <module name="simple-crud-operation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,6 +19,7 @@
       <module name="buildingrestfulwebservice" target="17" />
       <module name="component-mapping" target="17" />
       <module name="relationship-hibernate" target="17" />
+      <module name="simple-crud-operation" target="17" />
       <module name="spring-data-jpa-hibernate" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -27,6 +29,7 @@
       <module name="buildingrestfulwebservice" options="-parameters" />
       <module name="component-mapping" options="-parameters" />
       <module name="relationship-hibernate" options="-parameters" />
+      <module name="simple-crud-operation" options="-parameters" />
       <module name="spring-data-jpa-hibernate" options="-parameters" />
     </option>
   </component>
