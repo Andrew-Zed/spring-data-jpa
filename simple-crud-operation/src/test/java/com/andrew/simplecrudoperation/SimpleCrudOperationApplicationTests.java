@@ -5,6 +5,11 @@ import com.andrew.simplecrudoperation.repos.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+
 
 import java.util.Arrays;
 import java.util.List;
@@ -99,8 +104,35 @@ class SimpleCrudOperationApplicationTests {
 
     @Test
     public void testFindByIdsIn() {
-        List<Product> products = repository.findByIdIn(Arrays.asList(3, 4, 5));
+        Pageable pageable = PageRequest.of(0, 2);
+        List<Product> products = repository.findByIdIn(Arrays.asList(1, 2, 3, 4, 5), pageable);
         products.forEach(p -> System.out.println(p.getName()));
     }
 
+    @Test
+    public void testFindAllPaging() {
+        Pageable pageable = PageRequest.of(2, 2);
+
+        Page<Product> results = repository.findAll(pageable);
+        results.forEach(product -> System.out.println(product.getName()));
+    }
+
+    @Test
+    public void testFindAllSorting() {
+        repository.findAll(Sort.by(new Sort.Order(Sort.Direction.ASC, "name")))
+                .forEach(p -> System.out.println(p.getName()));
+    }
+
+    @Test
+    public void testFindAllSortingMultiple() {
+        repository.findAll(Sort.by(new Sort.Order(Sort.Direction.DESC, "name"),
+                        new Sort.Order(Sort.Direction.DESC, "price")))
+                .forEach(p -> System.out.println(p.getName()));
+    }
+
+    @Test
+    public void testFindAllPagingAndSorting() {
+        Pageable pageable = PageRequest.of(0, 2, Sort.Direction.DESC, "name");
+        repository.findAll(pageable).forEach(product -> System.out.println(product.getName()));
+    }
 }
