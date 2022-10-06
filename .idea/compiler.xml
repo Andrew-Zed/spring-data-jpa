@@ -7,11 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="associations" />
+        <module name="simple-crud-operation" />
         <module name="spring-data-jpa-hibernate" />
         <module name="relationship-hibernate" />
+        <module name="transactionmanagement" />
         <module name="component-mapping" />
         <module name="buildingrestfulwebservice" />
-        <module name="simple-crud-operation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +22,7 @@
       <module name="relationship-hibernate" target="17" />
       <module name="simple-crud-operation" target="17" />
       <module name="spring-data-jpa-hibernate" target="17" />
+      <module name="transactionmanagement" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -31,6 +33,7 @@
       <module name="relationship-hibernate" options="-parameters" />
       <module name="simple-crud-operation" options="-parameters" />
       <module name="spring-data-jpa-hibernate" options="-parameters" />
+      <module name="transactionmanagement" options="-parameters" />
     </option>
   </component>
 </project>

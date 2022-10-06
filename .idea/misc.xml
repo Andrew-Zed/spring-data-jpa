@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/buildingrestfulwebservice/pom.xml" />
         <option value="$PROJECT_DIR$/associations/pom.xml" />
         <option value="$PROJECT_DIR$/simple-crud-operation/pom.xml" />
+        <option value="$PROJECT_DIR$/transactionmanagement/pom.xml" />
       </list>
     </option>
   </component>

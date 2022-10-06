@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/relationship-hibernate/relationship-hibernate.iml" filepath="$PROJECT_DIR$/relationship-hibernate/relationship-hibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/simple-crud-operation/simple-crud-operation.iml" filepath="$PROJECT_DIR$/simple-crud-operation/simple-crud-operation.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-data-jpa-hibernate.iml" filepath="$PROJECT_DIR$/spring-data-jpa-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/transactionmanagement/transactionmanagement.iml" filepath="$PROJECT_DIR$/transactionmanagement/transactionmanagement.iml" />
     </modules>
   </component>
 </project>
